@@ -11,7 +11,7 @@ bool compare(Edge a, Edge b) {
     return a.weight < b.weight;
 }
 
-int findParent(int node, vector<int>& parent) {
+int findParent(int node,vector<int>& parent) {
     if (parent[node] == node)
         return node;
     return parent[node] = findParent(parent[node], parent);
