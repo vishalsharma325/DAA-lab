@@ -7,7 +7,7 @@ int knapsack(int capacity, int weight[], int profit[], int n) {
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= capacity; j++) {
             if (i == 0 || j == 0)
-                K[i][j] = 0;
+                K[i][j]= 0;
             else if (weight[i - 1] <= j)
                 K[i][j] = max(profit[i - 1] + K[i - 1][j - weight[i - 1]], K[i - 1][j]);
             else
